@@ -10,7 +10,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
+    <PackageReference Include="AutoMapper" Version="6.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CharacterCart.DAL\CharacterCart.DAL.csproj" />
+    <ProjectReference Include="..\Models\CharacterCart.Models.csproj" />
   </ItemGroup>
 
 </Project>
