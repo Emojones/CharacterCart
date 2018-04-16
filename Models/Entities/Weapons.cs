@@ -1,14 +1,27 @@
 ﻿using CharacterCart.Models.Entities.Base;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace CharacterCart.Models.Entities
 {
-   public class Weapons : EntitiesBase
+    [Table("Weapons", Schema = "CharacterCart")]
+    public class Weapons : EntitiesBase
     {
-        //name
-        //imgurl
-        //isranged
+        [MaxLength(50)]
+        [Required]
+        public string WeaponName { get; set; }
+
+        [DataType(DataType.ImageUrl)]
+        public string ImgUrl { get; set; }
+
+        //default shold be 0
+        [Display(Name = "Ranged Weapon")]
+        public bool IsRanged { get; set; }
+
+        [InverseProperty(nameof(Character.WeaponId))]
+        public List<Character> Characters { get; set; } = new List<Character>();
     }
 }
