@@ -15,7 +15,7 @@ namespace CharacterCart.Models.Entities
         public string WeaponName { get; set; }
 
         [DataType(DataType.ImageUrl)]
-        public string ImgUrl { get; set; }
+        public string WeaponImage { get; set; }
 
         //default shold be 0
         [Display(Name = "Ranged Weapon")]

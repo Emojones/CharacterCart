@@ -21,7 +21,7 @@ namespace CharacterCart.Models.Entities
         public bool IsDivineCaster { get; set; }
 
         [DataType(DataType.ImageUrl)]
-        public string ImgUrl { get; set; }
+        public string ClassImage { get; set; }
 
         [InverseProperty(nameof(Character.ClassId))]
         public List<Character> Characters { get; set; } = new List<Character>();
