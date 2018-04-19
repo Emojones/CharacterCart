@@ -21,7 +21,7 @@ namespace CharacterCart.Models.Entities
         [Display(Name = "Ranged Weapon")]
         public bool IsRanged { get; set; }
 
-        [InverseProperty(nameof(Character.WeaponId))]
-        public List<Character> Characters { get; set; } = new List<Character>();
+        //[InverseProperty(nameof(Character.WeaponId))]
+        //public List<Character> Characters { get; set; } = new List<Character>();
     }
 }

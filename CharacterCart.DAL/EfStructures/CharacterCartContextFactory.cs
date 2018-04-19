@@ -12,7 +12,7 @@ namespace CharacterCart.DAL.EfStructures
         public CharacterCartContext CreateDbContext(string[] args)
         {
             var optionsBuilder = new DbContextOptionsBuilder<CharacterCartContext>();
-            var connectionString = @"Server=(localdb)\mssqllocaldb;Database=CharacterCart;Trusted_Connection=True;   MultipleActiveResultSets=true;";
+            var connectionString = @"Server=(localdb)\mssqllocaldb;Database=CharacterCart;Trusted_Connection=True;MultipleActiveResultSets=true;";
 
             optionsBuilder.UseSqlServer(connectionString, options => options.EnableRetryOnFailure()).ConfigureWarnings(warnings => warnings.Throw(RelationalEventId.QueryClientEvaluationWarning));
             return new CharacterCartContext(optionsBuilder.Options);

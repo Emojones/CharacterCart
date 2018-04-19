@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CharacterCart.Models.Entities.Base;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -7,7 +8,7 @@ using System.Text;
 namespace CharacterCart.Models.Entities
 {
     [Table("Player", Schema="CharacterCart")]
-    public class Player
+    public class Player : EntitiesBase
     {
         //user name
         [MaxLength(25), ConcurrencyCheck]
@@ -24,8 +25,8 @@ namespace CharacterCart.Models.Entities
         [EmailAddress, DataType(DataType.EmailAddress), Display(Name = "Email Address")]
         public string Email { get; set; }
 
-        //Characters
-        [InverseProperty(nameof(Character.PlayerId))]
-        public List<Character> Characters { get; set; } = new List<Character>();
+        ////Characters
+        //[InverseProperty(nameof(Character.PlayerId))]
+        //public List<Character> Characters { get; set; } = new List<Character>();
     }
 }

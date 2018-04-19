@@ -14,7 +14,7 @@ namespace CharacterCart.Models.Entities
         [DataType(DataType.Text), Display(Name = "Race Name")]
         public string CharacterRacesName { get; set; }
 
-        [InverseProperty(nameof(Character.CharacterRaceId))]
-        public List<Character> Characters { get; set; } = new List<Character>();       
+        //[InverseProperty(nameof(Character.CharacterRaceId))]
+        //public List<Character> Characters { get; set; } = new List<Character>();       
     }
 }

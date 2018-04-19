@@ -23,9 +23,7 @@ namespace CharacterCart.Models.Entities
         [DataType(DataType.ImageUrl)]
         public string ClassImage { get; set; }
 
-        [InverseProperty(nameof(Character.ClassId))]
-        public List<Character> Characters { get; set; } = new List<Character>();
-
-
+        //[InverseProperty(nameof(Character.ClassId))]
+        //public List<Character> Characters { get; set; } = new List<Character>();
     }
 }
