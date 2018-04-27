@@ -11,9 +11,10 @@ using System;
 namespace CharacterCart.DAL.EfStructures.Migrations
 {
     [DbContext(typeof(CharacterCartContext))]
-    partial class CharacterCartContextModelSnapshot : ModelSnapshot
+    [Migration("20180427133921_ModelAddFk")]
+    partial class ModelAddFk
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -14,17 +14,25 @@ namespace CharacterCart.Models.Entities
         [MaxLength(50), Required, ConcurrencyCheck]
         public string CharacterName { get; set; }
 
-        //classes       
-        public Classes ClassId { get; set; }
+        //classes         
+        public int ClassId { get; set; }
+        [ForeignKey(nameof(ClassId))]
+        public Classes Classes { get; set; }
 
         //race       
-        public CharacterRaces CharacterRaceId { get; set; }       
+        public int CharacterRaceId { get; set; } 
+        [ForeignKey(nameof(CharacterRaceId))]
+        public CharacterRaces CharactersRaces { get; set; }
 
         //weapons 
-        public Weapons WeaponId { get; set; }
+        public int WeaponId { get; set; }
+        [ForeignKey(nameof(WeaponId))]
+        public Weapons Weapons { get; set; }
 
         //player
-        public Player PlayerId { get; set; }        
+        public int PlayerId { get; set; }  
+        [ForeignKey(nameof(PlayerId))]
+        public Player Player { get; set; }
         
     }
 }
